@@ -1,3 +1,6 @@
+# FORKED
+- Enable API for use in automated workflow
+
 # velociraptor-docker
 Run [Velocidex Velociraptor](https://github.com/Velocidex/velociraptor) server with Docker
 
