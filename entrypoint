@@ -23,7 +23,7 @@ fi
 
 # If no existings API config, set it up 
 if [! -f api.config.yaml ]; then
-	./velociraptor --config server.config.yaml config api_client --name $VELO_API_USER --role $VELO_API_ROLE api.config.yaml
+	./velociraptor --config server.config.yaml config api_client --name $VELOX_API_USER --role $VELOX_API_ROLE api.config.yaml
 fi
 
 # Check Server Certificate Status, Re-generate if it's expiring in 24-hours or less
