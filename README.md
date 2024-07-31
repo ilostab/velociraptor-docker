@@ -4,7 +4,7 @@ Run [Velocidex Velociraptor](https://github.com/Velocidex/velociraptor) server w
 #### Install
 
 - Ensure [docker-compose](https://docs.docker.com/compose/install/) is installed on the host
-- `git clone https://github.com/weslambert/velociraptor-docker`
+- `git clone https://github.com/ilostab/velociraptor-docker`
 - `cd velociraptor-docker`
 - Change credential values in `.env` as desired
 - `docker-compose up` (or `docker-compose up -d` for detached)
