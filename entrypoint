@@ -22,7 +22,7 @@ if [ ! -f server.config.yaml ]; then
 fi
 
 # If no existings API config, set it up 
-if [! -f api.config.yaml ]; then
+if [! -f api.config.yaml ] && [ "$VELOX_API" = "1" ]; then
 	./velociraptor --config server.config.yaml config api_client --name $VELOX_API_USER --role $VELOX_API_ROLE api.config.yaml
 fi
 
