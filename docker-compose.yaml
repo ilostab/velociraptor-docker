@@ -2,6 +2,7 @@ version: '2'
 services:
   velociraptor:
     container_name: velociraptor
+    image: ilo/velociraptor
     build:
       context: ./
       dockerfile: Dockerfile
@@ -13,6 +14,9 @@ services:
       - VELOX_ROLE=${VELOX_ROLE}
       - VELOX_SERVER_URL=${VELOX_SERVER_URL}
       - VELOX_FRONTEND_HOSTNAME=${VELOX_FRONTEND_HOSTNAME}
+      - VELOX_API=${VELOX_API}
+      - VELOX_API_USER=${VELOX_API_USER}
+      - VELOX_API_ROLE=${VELOX_API_ROLE}
     ports:
 #     - "8000:8000"
       - "8001:8001"
