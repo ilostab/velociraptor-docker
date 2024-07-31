@@ -1,7 +1,13 @@
-FROM ubuntu:22.04
-LABEL version="Velociraptor v0.72.0-1"
+FROM ubuntu:24.04
+
+# Fetch the latest version from GitHub
+ARG VELOCIRAPTOR_VERSION=$(curl -s https://api.github.com/repos/velocidex/velociraptor/releases/latest | jq -r '.tag_name')
+
+# LABELS
+LABEL version="Velociraptor ${VELOCIRAPTOR_VERSION}"
 LABEL description="Velociraptor server in a Docker container"
 LABEL maintainer="Wes Lambert, @therealwlambert"
+
 COPY ./entrypoint .
 RUN chmod +x entrypoint && \
     apt-get update && \
