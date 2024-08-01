@@ -17,6 +17,7 @@ services:
       - VELOX_API=${VELOX_API}
       - VELOX_API_USER=${VELOX_API_USER}
       - VELOX_API_ROLE=${VELOX_API_ROLE}
+      - VELOX_SERVER_IP=${VELOX_SERVER_IP}
     ports:
 #     - "8000:8000"
       - "8001:8001"
