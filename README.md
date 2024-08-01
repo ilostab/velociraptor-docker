@@ -16,9 +16,8 @@ Run [Velocidex Velociraptor](https://github.com/Velocidex/velociraptor) server w
 - Access the Velociraptor GUI via https://\<hostip\>:8889 
   - Default u/p is `admin/admin`
   - This can be changed by running:
-  `docker exec -it velociraptor ./velociraptor --config server.config.yaml user add user1 user1 --role administrator`
+  `docker exec -it velociraptor ./velociraptor --config server.config.yaml user add admin password --role administrator` or in GUI. 
 - Access the Velociraptor API with:
-  - Change the `api_connection_string` in api.config.yaml to the ip of the server. 
   `velociraptor --api_config api.config.yaml query "SELECT * FROM info()" --format jsonl | jq`
   - Or access it using python as shown here: https://docs.velociraptor.app/docs/server_automation/server_api/ 
 
