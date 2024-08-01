@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./velociraptor:/velociraptor/:rw
+      - /mnt/yggrasil/:/mnt/yggdrasil/:rw
     environment:
       - VELOX_USER=${VELOX_USER}
       - VELOX_PASSWORD=${VELOX_PASSWORD}
