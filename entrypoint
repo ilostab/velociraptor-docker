@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-BIND_ADDRESS="0.0.0.0"
+BIND_ADDRESS="$VELOX_SERVER_IP"
 PUBLIC_PATH="public"
 LOG_DIR="."
 DATASTORE_LOCATION="./"
